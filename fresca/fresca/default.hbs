@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>{{meta_title}}</title>
+    <meta name="description" content="{{meta_description}}" />
+    <meta name="HandheldFriendly" content="True" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <link rel="stylesheet" href="{{asset "css/bootstrap.css"}}">
+    <link rel="stylesheet" href="{{asset "css/font-awesome.css"}}">
+    <link rel="stylesheet" href="{{asset "css/hover.css"}}">
+    <link rel="stylesheet" href="{{asset "css/animate.css"}}">
+    <link rel="stylesheet" type="text/css" href="{{asset "css/prism.css"}}" />
+    <link rel="stylesheet" href="{{asset "css/fresca.css"}}">
+    {{ghost_head}}
+    <script src="https://code.jquery.com/jquery-2.2.1.min.js"></script>
+    <script type='text/javascript'>
+        var disqus = { 'activate' : false, 'shortname' : 'demo' }; // Edit these values to set disqus username, activate/deactivate comments.
+    </script>
+</head>
+
+<body class="{{body_class}}">
+
+    {{navigation}}
+    <a id="top-anchor"></a>
+    <div class="wrapper">
+        {{{body}}}
+        <div class="push"></div>
+    </div>
+    {{> "footer"}}
+    {{ghost_foot}}
+    <script src="{{asset "js/bootstrap.min.js"}}"></script>
+    <script src="{{asset "js/jquery.sticky.js"}}"></script>
+    <script src='{{asset "js/prism.js"}}'></script>
+    <script src="{{asset "js/fresca.js"}}"></script>
+
+</body>
+
+</html>

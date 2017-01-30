@@ -1,0 +1,66 @@
+{{!< default}}
+
+<div class="container">
+
+    <div class="row" style="margin-top:100px;">
+
+    <article id="post-{{id}}" class="post {{post_class}}" role="article" itemscope itemtype="http://schema.org/Article">
+
+        {{#post}}
+
+            <div class="col-sm-8 animated bounceInUp">
+
+                <h2 class="post-title">
+                    {{title}}
+                </h2>
+
+                {{#if author.image}}
+                    <a href="/author/{{author.slug}}"><img src="{{author.image}}" class="img-circle" style="height:35px;width:35px;margin-left:5px;margin-right:10px;"></a>
+                {{/if}}
+
+                <span class="author-post">
+                    <i class="fa fa-calendar-o author-post-icon"></i>
+                    {{date format='MMMM DD, YYYY'}}
+                </span>
+
+                <span class="pull-right tags-post">
+                    {{#if tags}}
+                        <mark>&nbsp;<i class="fa fa-tags tags-post-icon"></i>
+                        {{tags separator=", "}}&nbsp;</mark>
+                    {{/if}}
+                </span>
+
+                {{#if image}}
+                    <div class="post-image">
+                        <img src="{{image}}" alt="{{title}}" />
+                    </div>
+                {{else}}
+                    <br><br>
+                {{/if}}
+
+                <div class="post-content" itemprop="articleBody">
+
+					{{content}}
+                    <hr>
+				</div>
+
+            </div>
+
+        {{/post}}
+
+        <div class="col-md-3 col-md-offset-1 col-sm-4">
+
+            {{> "blog-info"}}
+
+            {{> "featured"}}
+            
+            {{> "tags"}}
+
+        </div>
+
+    </article>
+
+    </div>
+
+</div>
+

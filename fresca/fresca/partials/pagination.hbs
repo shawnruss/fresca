@@ -1,0 +1,10 @@
+<nav class="pagination mark" role="navigation"> &nbsp;
+    {{#if prev}}
+        <a class="newer-posts" href="{{page_url prev}}">&larr; More Recent Posts</a> &bull; 
+    {{/if}}
+    <span class="page-number"> Page {{page}} of {{pages}}</span>
+    {{#if next}}
+        &bull; <a class="older-posts" href="{{page_url next}}">Older Posts &rarr;</a>
+    {{/if}}
+    &nbsp;
+</nav>

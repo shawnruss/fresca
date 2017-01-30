@@ -1,0 +1,59 @@
+{{!< default}}
+
+<div class="container">
+
+    <div class="row" style="margin-top:100px;">
+
+        <div class="col-sm-8 animated bounceInUp">
+
+            <div class="row">
+
+                {{#author}}
+
+                    <div class="col-sm-6">
+                        <h4><span class="hidden-xs">Posts by </span><span class="to-upper"><mark>{{name}}</mark></span></h4>
+                        {{#if location}}
+                            <p class="small">
+                                <i class="fa fa-map-marker" aria-hidden="true"></i> <a href="https://www.google.com/search?safe=off&tbm=isch&q={{encode location}}" target="_blank" class="hvr-underline-from-center" style="text-decoration:none;">{{location}}</a>
+                            </p>
+                        {{/if}}
+                        {{#if website}} 
+                            <p class="small"><i class="fa fa-link" aria-hidden="true"></i> <a href="{{website}}" target="_blank" class="hvr-underline-from-center" style="text-decoration:none;">{{website}}</a></a>
+                        {{/if}}
+                        <p>
+                            {{{bio}}}
+                        </p>
+                    </div>
+                    <div class="col-sm-6">
+                        {{#if image}}
+                            <img src="{{image}}" class="img-responsive img-thumbnail author-image pull-right">
+                        {{/if}}
+                    </div>
+
+                {{/author}}
+
+            </div>
+
+            <hr/>
+
+            {{#foreach posts}}
+                {{> "loop"}}
+            {{/foreach}}
+
+            {{pagination}}
+
+        </div>
+
+        <div class="col-sm-3 col-sm-offset-1">
+
+            {{> "blog-info"}}
+
+            {{> "featured"}}
+
+            {{> "tags"}}
+
+        </div>
+
+    </div>
+
+</div>

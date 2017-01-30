@@ -1,0 +1,71 @@
+
+<footer class="footer footer-container footer-styles">
+
+	<div class="container">
+
+	    <div class="row">
+
+	        <div class="col-sm-10">
+
+	        	{{#foreach @blog.navigation}}
+                    <a href="{{url absolute="true"}}" class="hvr-underline-from-center footer-nav-link">{{label}}</a>
+                {{/foreach}}
+                <a href="#top-anchor" class="hvr-underline-from-center">Top <i class="fa fa-arrow-up"></i> </a>
+
+	            <div class="footer-social-icons hidden-xs">
+                
+                    {{!-- Replace the URLs below with your social URLs --}}
+    	        	<a href="http://twitter.com" class="nav-social-icons animated flipInY"><i class="fa fa-twitter fa-2x hvr-pop icon-footer"></i></a>
+    	        	<a href="https://www.instagram.com" class="nav-social-icons animated flipInY"><i class="fa fa-instagram fa-2x hvr-pop icon-footer"></i></a>
+                    <a href="https://github.com" class="nav-social-icons animated flipInY"><i class="fa fa-github fa-2x hvr-pop icon-footer"></i></a>
+                    <a href="/rss/" class="nav-social-icons animated flipInY"><i class="fa fa-rss fa-2x hvr-pop icon-footer"></i></a>
+
+                    {{!-- 
+                        Uncomment the desired <a> tags below and set your custom URL to display social media icons.
+                        Icons are displayed using Font Awesome.  If you desired icon is missing.  Find it here.
+                        https://fortawesome.github.io/Font-Awesome/icons/#brand
+                    --}}
+
+                    {{!-- Facebook --}}
+                    {{!-- <a href="https://www.facebook.com" class="nav-social-icons animated flipInY"><i class="fa fa-facebook fa-2x hvr-pop icon-footer"></i></a></li> --}}
+
+                    {{!-- Google+ --}}
+                    {{!-- <a href="https://plus.google.com/" class="nav-social-icons animated flipInY"><i class="fa fa-google-plus fa-2x hvr-pop icon-footer"></i></a></li> --}}
+
+                    {{!-- Reddit --}}
+                    {{!-- <a href="https://www.reddit.com/" class="nav-social-icons animated flipInY"><i class="fa fa-reddit fa-2x hvr-pop icon-footer"></i></a></li> --}}
+
+                    {{!-- Stack Overflow --}}
+                    {{!-- <a href="http://stackoverflow.com/" class="nav-social-icons animated flipInY"><i class="fa fa-stack-overflow fa-2x hvr-pop icon-footer"></i></a></li> --}}
+
+                    {{!-- YouTube --}}
+                    {{!-- <a href="https://www.youtube.com/" class="nav-social-icons animated flipInY"><i class="fa fa-youtube fa-2x hvr-pop icon-footer"></i></a></li> --}}
+
+                    {{!-- Vine --}}
+                    {{!-- <a href="https://vine.co/" class="nav-social-icons animated flipInY"><i class="fa fa-vine fa-2x hvr-pop icon-footer"></i></a></li> --}}
+
+                    {{!-- Pinterest --}}
+                    {{!-- <a href="https://www.pinterest.com/" class="nav-social-icons animated flipInY"><i class="fa fa-pinterest fa-2x hvr-pop icon-footer"></i></a></li> --}}
+
+                    {{!-- LinkedIn --}}
+                    {{!-- <a href="https://www.linkedin.com/" class="nav-social-icons animated flipInY"><i class="fa fa-linkedin-square fa-2x hvr-pop icon-footer"></i></a></li> --}}
+
+                </div>
+
+                <div class="shout-out hidden-xs">
+                    <a class="small" href="http://ghost.org">Powered by Ghost</a>
+                </div>
+
+	        </div>
+	        
+	        {{#if @blog.logo}}
+		    	<div class="col-sm-2 hidden-xs">
+		    		<img src="{{@blog.logo}}" alt="{{@blog.title}}" class="img-responsive pull-right hvr-buzz-out footer-logo" />
+		    	</div>
+	    	{{/if}}
+	    </div>
+
+	</div>
+
+</footer>
+

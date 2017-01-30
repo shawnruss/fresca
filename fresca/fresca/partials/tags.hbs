@@ -1,0 +1,13 @@
+
+{{#get "tags" limit="25" include="count.posts" order="count.posts desc"}}
+    <ul class="list-group hidden-xs">
+        <li class="list-group-item sidebar-title">
+            <h4 class="">TOPICS <i class="fa fa-tags pull-right hvr-pop" aria-hidden="true"></i></h4>
+        </li>
+        <li class="list-group-item tags-sidebar">
+            {{#foreach tags}}
+                <a href="/tag/{{slug}}" class="btn btn-default btn-xs">{{name}}</a>
+            {{/foreach}}
+        </li>
+    </div>
+{{/get}}

@@ -1,0 +1,13 @@
+<div class="panel panel-default hidden-xs blog-info">
+    <div class="panel-body">
+        <h4 class="to-upper">{{@blog.title}}</h4>
+        {{@blog.description}}
+        {{#if @blog.cover}}
+        	<a href="/"><img src="{{@blog.cover}}" alt="{{@blog.title}}" class="img-responsive blog-logo" /></a>
+        {{else}}
+        	{{#if @blog.logo}}
+        		<a href="/"><img src="{{@blog.logo}}" alt="{{@blog.title}}" class="img-responsive blog-logo" /></a>
+        	{{/if}}
+    	{{/if}}
+    </div>
+</div>

@@ -1,0 +1,72 @@
+<div class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+        <div class="navbar-header">
+            <a href="/" class="navbar-brand fresca-brand">{{#if @blog.logo}}<img src="{{@blog.logo}}" alt="{{@blog.title}}" class="img-responsive header-blog-logo pull-left hvr-buzz-out" />{{/if}}{{@blog.title}}</a>
+            <button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#navbar-main">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+        </div>
+        <div class="navbar-collapse collapse" id="navbar-main">
+
+            <ul class="nav navbar-nav">
+                {{#foreach navigation}}
+                    <li class="nav-{{slug}}{{#if current}} nav-current active{{/if}}"><a href="{{url absolute="true"}}" class="hvr-underline-from-center">{{label}}</a></li>
+                {{/foreach}}
+            </ul>
+
+            <ul class="nav navbar-nav navbar-right hidden-xs">
+
+                {{!-- Edit this section to cutomize your social media icons. --}}
+
+                {{!-- Twitter --}}
+                <li><a href="http://twitter.com" class="nav-social-icons animated flipInY"><i class="fa fa-twitter fa-2x hvr-pop icon-top"></i></a></li>
+                
+                {{!-- Instagram --}}
+                <li><a href="https://www.instagram.com" class="nav-social-icons animated flipInY"><i class="fa fa-instagram fa-2x hvr-pop icon-top"></i></a></li>
+                
+                {{!-- GitHub --}}
+                <li><a href="https://github.com" class="nav-social-icons animated flipInY"><i class="fa fa-github fa-2x hvr-pop icon-top"></i></a></li>
+                
+                {{!-- RSS Feed --}}
+                <li><a href="/rss/" class="nav-social-icons animated flipInY"><i class="fa fa-rss fa-2x hvr-pop icon-top"></i></a></li>
+
+                {{!-- 
+                    Uncomment the desired <li> tags below and set your custom URL to display social media icons.
+                    Icons are displayed using Font Awesome.  If you desired icon is missing.  Find it here.
+                    https://fortawesome.github.io/Font-Awesome/icons/#brand
+                    If you need help with removing the comments see here:
+                    http://handlebarsjs.com/#comments
+                --}}
+
+                {{!-- Facebook --}}
+                {{!-- <li><a href="https://www.facebook.com" class="nav-social-icons animated flipInY"><i class="fa fa-facebook fa-2x hvr-pop icon-top"></i></a></li> --}}
+
+                {{!-- Google+ --}}
+                {{!-- <li><a href="https://plus.google.com/" class="nav-social-icons animated flipInY"><i class="fa fa-google-plus fa-2x hvr-pop icon-top"></i></a></li> --}}
+
+                {{!-- Reddit --}}
+                {{!-- <li><a href="https://www.reddit.com/" class="nav-social-icons animated flipInY"><i class="fa fa-reddit fa-2x hvr-pop icon-top"></i></a></li> --}}
+
+                {{!-- Stack Overflow --}}
+                {{!-- <li><a href="http://stackoverflow.com/" class="nav-social-icons animated flipInY"><i class="fa fa-stack-overflow fa-2x hvr-pop icon-top"></i></a></li> --}}
+
+                {{!-- YouTube --}}
+                {{!-- <li><a href="https://www.youtube.com/" class="nav-social-icons animated flipInY"><i class="fa fa-youtube fa-2x hvr-pop icon-top"></i></a></li> --}}
+
+                {{!-- Vine --}}
+                {{!-- <li><a href="https://vine.co/" class="nav-social-icons animated flipInY"><i class="fa fa-vine fa-2x hvr-pop icon-top"></i></a></li> --}}
+
+                {{!-- Pinterest --}}
+                {{!-- <li><a href="https://www.pinterest.com/" class="nav-social-icons animated flipInY"><i class="fa fa-pinterest fa-2x hvr-pop icon-top"></i></a></li> --}}
+
+                {{!-- LinkedIn --}}
+                {{!-- <li><a href="https://www.linkedin.com/" class="nav-social-icons animated flipInY"><i class="fa fa-linkedin-square fa-2x hvr-pop icon-top"></i></a></li> --}}
+
+
+            </ul>
+
+        </div>
+    </div>
+</div>

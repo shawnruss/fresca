@@ -1,0 +1,46 @@
+{{!< default}}
+
+<div class="container">
+
+    <div class="row" style="margin-top:100px;">
+
+        <div class="col-sm-8 animated bounceInUp">
+
+            {{#tag}}
+
+                <h4><span class="hidden-xs">Posts tagged with </span><span class="to-upper"><mark>{{name}}</mark></span></h4>
+
+                {{#if image}}
+                    <p><img src="{{image}}" alt="{{name}}" class="img-responsive tag-image"/></p>
+                {{/if}}
+
+                {{#if description}}
+                    <p>{{description}}</p>
+                {{/if}}
+
+            {{/tag}}
+
+            <hr/>
+
+            {{#foreach posts}}
+                {{> "loop"}}
+            {{/foreach}}
+
+            {{pagination}}
+
+        </div>
+
+        <div class="col-sm-3 col-sm-offset-1">
+
+            {{> "blog-info"}}
+
+            {{> "featured"}}
+            
+            {{> "tags"}}
+
+        </div>
+
+    </div>
+
+</div>
+

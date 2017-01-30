@@ -1,0 +1,8 @@
+{{#get "posts" limit="3" filter="featured:true" order="created_at asc"}}
+	<ul class="list-group hidden-xs">
+	<li class="list-group-item sidebar-title"><h4>FEATURED <i class="fa fa-star-o pull-right hvr-pop" aria-hidden="true"></i></h4></li>
+    {{#foreach posts}}
+        <li class="list-group-item"><a href="/{{slug}}" class="read-more">{{title}}</a></li>
+    {{/foreach}}
+    </ul>
+{{/get}}

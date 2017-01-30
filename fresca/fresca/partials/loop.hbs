@@ -1,0 +1,45 @@
+<div class="row">
+
+    <div class="col-sm-12">
+
+        {{#if author.image}}
+            <a href="/author/{{author.slug}}"><img src="{{author.image}}" class="img-circle img-author"></a>
+        {{/if}}
+
+        <span class="author-post hidden-xs">
+            <a href="/author/{{author.slug}}" class="hvr-underline-from-center">{{author.name}}</a>
+            <i class="fa fa-calendar-o author-post-icon"></i>
+            {{date format='MMMM DD, YYYY'}}
+        </span>
+
+        <span class="pull-right tags-post">
+            {{#if tags}}
+                <mark>&nbsp;<i class="fa fa-tags tags-post-icon"></i>
+                {{tags separator=", " limit="2"}}&nbsp;</mark>
+            {{/if}}
+        </span>
+
+        <h3>
+            <a href="{{{url}}}" class="title-linked">{{title}}</a>
+        </h3>
+
+    </div>
+
+    <div class="col-md-{{#if image}}8{{else}}12{{/if}} col-xs-12 post-excerpt">
+        <p>
+            {{excerpt words="40"}} ...
+            <br>
+            <a href="{{{url}}}" class="read-more hvr-underline-from-center"><i class="fa fa-book" aria-hidden="true"></i> Read More <i class="fa fa-hand-o-right" aria-hidden="true"></i></a>
+        </p>
+    </div>
+
+    {{#if image}}
+        <div class="col-sm-4 hidden-xs hidden-sm">
+
+            <a href="{{{url}}}"><img src="{{image}}" class="hidden-xs hidden-sm img-responsive img-thumbnail post-thumbnail"></a>
+
+        </div>
+    {{/if}}
+
+</div>
+<hr/>
